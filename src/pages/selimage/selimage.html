@@ -1,0 +1,28 @@
+<ion-header>
+</ion-header>
+
+<ion-content padding>
+    <div text-center>
+        <ion-title>App Name</ion-title>
+        <p> You can choose {{imgMaxNum}} pictures in total which are not older than 1 day</p>
+    </div>
+    <br>
+
+    <div class="my-image-items">
+        <ion-thumbnail *ngFor="let imgArray of imgArrays">
+            <img src="{{imgArray.img}}">
+            <button ion-button small round (click)="presentActionSheet(imgArray.id)" *ngIf="!imgArray.bFlag">select Image</button>
+            <button ion-button small round (click)="removeImage(imgArray.id)" *ngIf="imgArray.bFlag">
+                <ion-icon name ="trash"> remove </ion-icon>
+            </button>
+        </ion-thumbnail>
+    </div>
+
+</ion-content>
+<ion-footer>
+    <div class="my-footer">
+        <button class="my-button1" ion-button [navPush]="homePage" small *ngIf="!btnSelFlag">Back</button>
+        <button class="my-button2" ion-button [navPush]="homePage" small *ngIf="btnSelFlag">Back</button>
+        <button class="my-button2" ion-button small (click)="fileSend()" *ngIf="btnSelFlag">Print</button>
+    </div>
+</ion-footer>

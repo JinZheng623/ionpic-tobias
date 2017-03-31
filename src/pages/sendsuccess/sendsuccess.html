@@ -1,0 +1,26 @@
+<ion-header>
+</ion-header>
+
+<ion-content padding>
+    <div text-center>
+        <ion-title>App Name</ion-title>
+    </div>
+    <br>
+
+    <div class="logoimg">
+        <img src="">
+        <p class="para1"> Thanks for uploading your pictures. Your pictures are in queue for printing, now</p>
+        <button ion-button [navPush]="homePage" small class="okbutton" round>
+            <ion-icon name ="close-circle" round> Ok </ion-icon>
+        </button>
+    </div>
+
+</ion-content>
+<ion-footer>
+    <div text-center>
+        <button ion-button [navPush]="selImagePage" small>Pic Selection</button>
+    </div>
+    <div text-center>
+        <button ion-button [navPush]="aboutPage" small>Help</button>
+    </div>
+</ion-footer>
