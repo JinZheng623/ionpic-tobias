@@ -3,18 +3,21 @@
 
 <ion-content padding>
     <div text-center>
-        <ion-title>App Name</ion-title>
+        <ion-title>PicturePrint</ion-title>
     </div>
     <br>
     <div class="logoimg">
-        <img src="">
+        <img src="assets/icon/OrangeCircles.jpg">
     </div>
+
 </ion-content>
 <ion-footer>
-    <div text-center>
-        <button ion-button [navPush]="selImagePage" small>Pic Selection</button>
-    </div>
-    <div text-center>
-        <button ion-button [navPush]="aboutPage" small>Help</button>
+    <div class="my-footer">
+        <div text-center>
+            <button ion-button [navPush]="selImagePage" small>Bilder Auswahl</button>
+        </div>
+        <div text-center>
+            <button ion-button [navPush]="helpPage" small>Hilfe</button>
+        </div>
     </div>
 </ion-footer>

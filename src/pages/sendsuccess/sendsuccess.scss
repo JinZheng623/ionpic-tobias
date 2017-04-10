@@ -1,5 +1,9 @@
+div.apptitle {
+    height: 40px;
+}
+
 .logoimg {
-    height: 100%;
+    height: calc(100% - 40px);
     width: 100%;
     img {
         width: 100%;
@@ -10,6 +14,8 @@
 
 .logoimg .para1 {
     top: 20%;
+    left: 0;
+    right: 0;
     font-size: 20px;
     text-align: center;
     position: absolute;
@@ -17,9 +23,9 @@
 }
 
 .logoimg .okbutton {
-    height: 5%;
+    height: 20px;
     width: 20%;
-    top: 50%;
+    top: 60%;
     left: 40%;
     position: absolute;
     background-color: indianred;

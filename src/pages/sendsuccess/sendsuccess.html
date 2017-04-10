@@ -2,14 +2,15 @@
 </ion-header>
 
 <ion-content padding>
-    <div text-center>
-        <ion-title>App Name</ion-title>
+    <div class="apptitle" text-center>
+        <ion-title>PicturePrint</ion-title>
     </div>
-    <br>
 
     <div class="logoimg">
         <img src="">
-        <p class="para1"> Thanks for uploading your pictures. Your pictures are in queue for printing, now</p>
+        <div>
+            <p class="para1"> Vielen Dank für die Nutzung von unserem Service. Ihre Bilder werden nun gedruckt.</p>
+        </div>
         <button ion-button [navPush]="homePage" small class="okbutton" round>
             <ion-icon name ="close-circle" round> Ok </ion-icon>
         </button>
@@ -18,9 +19,9 @@
 </ion-content>
 <ion-footer>
     <div text-center>
-        <button ion-button [navPush]="selImagePage" small>Pic Selection</button>
+        <button ion-button [navPush]="selImagePage" small>Bilder Auswahl</button>
     </div>
     <div text-center>
-        <button ion-button [navPush]="aboutPage" small>Help</button>
+        <button ion-button [navPush]="helpPage" small>Hilfe</button>
     </div>
 </ion-footer>

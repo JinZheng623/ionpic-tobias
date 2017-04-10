@@ -1,0 +1,10 @@
+{
+  "ServerUrl": "http://innofox.de/test/partyprint/server/index.php",
+
+  "ImgAgeFlag": true,
+  "ImgAgeDate":"04/01/2017 16:00:00",
+  "ImgMaxNum": 15,
+
+  "CamOnly": 2,
+  "SafariLimit": 9999
+}
