@@ -24556,8 +24556,15 @@ div.fadeMe {
 }
 
 .my-image-items ion-thumbnail img {
-  width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 100%;
+  left: 50%;
+  width: auto;
+  max-width: 100%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translatex(-50%) translatey(-50%);
+  transform: translatex(-50%) translatey(-50%);
 }
 
 .my-image-items .one-image {
