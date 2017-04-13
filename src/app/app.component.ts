@@ -20,7 +20,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      this.http.get('/config.json').map(res => res.json()).subscribe(data => {
+      this.http.get('config.json').map(res => res.json()).subscribe(data => {
         globalVars.setMyGlobalVar(data);
       });
     });

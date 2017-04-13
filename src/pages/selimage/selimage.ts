@@ -47,7 +47,8 @@ export class SelImagePage {
 
     camera.addEventListener('change', function(e: any) {
         var file = e.target.files[0];
-        if (file != undefined && file != null) {
+      if (file != undefined) {
+        if (file != null) {
 
           var file = this.files[0];
           //if (typeof this.files[0].lastModified === 'undefined') {
@@ -62,6 +63,7 @@ export class SelImagePage {
           //   lastModified = file.lastModified;
           // }
 
+          // alert(e.target.value);
           // file = Server.MapPath(file);
           // var fso = new ActiveXObject("Scripting.FileSystemObject");
           // var fs = fso.GetFile(thisfile);
@@ -72,16 +74,16 @@ export class SelImagePage {
           var ageLimitMs = ageLimit.getTime();
           //alert("limit: "+new Date(ageLimitMs)+"<br>img: "+new Date(lastModified));
           //alert(file.lastModifiedDate);
-          if (lastModified<ageLimitMs){
-                    alert("Sorry das Bild ist schon zu alt.");
+          if (lastModified < ageLimitMs) {
+            alert("Sorry das Bild ist schon zu alt.");
           }
-          else if(self.imgMaxNum == 1){
+          else if (self.imgMaxNum == 1) {
             self.imgArrays[0].img = self.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(file));
             self.imgArrays[0].bFlag = true;
             self.imgArrays[0].file = file;
             self.btnSel();
           }
-          else{
+          else {
             self.imgArrays[self.clickIndex].img = self.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(file));
             self.imgArrays[self.clickIndex].bFlag = true;
             self.imgArrays[self.clickIndex].file = file;
@@ -90,6 +92,7 @@ export class SelImagePage {
 
 
         }
+      }
     });
     $(".fadeMe").hide();
 
