@@ -1,0 +1,41 @@
+<div class="fadeMe">
+  <div style="position:relative;width:100vw;height:100vh;">
+    <div class="proBar">
+      <label>Bilder werden übertragen...</label><br>
+      <progress id="progressBar" [value]="proValue" [max]="max"></progress>
+    </div>
+  </div>
+</div>
+<ion-header>
+</ion-header>
+
+<ion-content padding id="sel_img">
+  <div text-center>
+    <ion-title>PicturePrint</ion-title>
+    <p> Sie können insgesamt {{imgMaxNum}} Bilder übertragen, welche nicht älter als {{imgAgeHours}} Stunden alt sind.</p>
+  </div>
+  <br>
+
+  <div class="my-image-items">
+    <ion-thumbnail *ngFor="let imgArray of imgArrays">
+      <img [src]="imgArray.img">
+      <!--<button ion-button small round (click)="presentActionSheet(imgArray.id)" *ngIf="!imgArray.bFlag">auswählen-->
+      <!--</button>-->
+      <!--<button ion-button small round (click)="removeImage(imgArray.id)" *ngIf="imgArray.bFlag">-->
+        <!--<ion-icon name ="trash"> entfernen </ion-icon>-->
+      <!--</button>-->
+    </ion-thumbnail>
+
+  </div>
+
+  <!--<input id="camera" type="file" accept="image/*" style="visibility: hidden">-->
+
+</ion-content>
+<ion-footer>
+  <div class="my-footer">
+    <button class="my-button1" ion-button [navPush]="homePage" small *ngIf="!btnSelFlag">Zurück</button>
+    <button class="my-button2" ion-button [navPush]="homePage" small *ngIf="btnSelFlag">Zurück</button>
+    <button class="my-button2" ion-button small (click)="fileSend()" *ngIf="btnSelFlag">Drucken</button>
+
+  </div>
+</ion-footer>

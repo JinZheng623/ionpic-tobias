@@ -9,6 +9,7 @@ import { SendSuccessPage } from '../pages/sendsuccess/sendsuccess';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {GlobalVars} from './globalVars';
+import {ReprintPage} from "../pages/reprint/reprint";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {GlobalVars} from './globalVars';
     HelpPage,
     HomePage,
     SelImagePage,
+    ReprintPage,
     SendSuccessPage
   ],
   imports: [
@@ -27,6 +29,7 @@ import {GlobalVars} from './globalVars';
     HelpPage,
     HomePage,
     SelImagePage,
+    ReprintPage,
     SendSuccessPage,
   ],
   providers: [

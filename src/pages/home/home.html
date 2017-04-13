@@ -15,6 +15,7 @@
     <div class="my-footer">
         <div text-center>
             <button ion-button [navPush]="selImagePage" small>Bilder Auswahl</button>
+            <button ion-button [navPush]="reprintPage" small *ngIf="btnReprintFlag">Reprint</button>
         </div>
         <div text-center>
             <button ion-button [navPush]="helpPage" small>Hilfe</button>

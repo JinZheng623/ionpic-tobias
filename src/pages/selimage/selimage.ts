@@ -33,7 +33,7 @@ export class SelImagePage {
   proValue = 0;
 
   config: any;
-  pageContent: any;
+  fingerprint: any;
 
   clickIndex = 0;
   files = [];
@@ -112,8 +112,9 @@ export class SelImagePage {
               public sanitizer: DomSanitizer
   )
   {
+    this.fingerprint = globalVars.getFingerprint();
     this.config = globalVars.getMyGlobalVar();
-    console.log(this.config);
+    // console.log(this.config);
     this.is_safari = navigator.userAgent.toLowerCase().indexOf('iphone') > -1 || navigator.userAgent.toLowerCase().indexOf('mac') > -1;
       if (this.config.ImgAgeFlag==true) // Selectable MaxNum
       {
@@ -225,6 +226,7 @@ export class SelImagePage {
   fileSend(){
     $(".fadeMe").show();
     var formData = new FormData();
+    formData.append('fingerprint', this.fingerprint);
     for(let imageSub of this.imgArrays){
       if (imageSub.bFlag == true && imageSub.file != null){
         formData.append("fileName[]", imageSub.file,this.createFileName() );
@@ -236,7 +238,7 @@ export class SelImagePage {
     xhr.upload.addEventListener("load", transferComplete);
     xhr.upload.addEventListener("error", transferFailed);
     xhr.upload.addEventListener("progress", updateProgress);
-    xhr.open("POST", this.config.ServerUrl);
+    xhr.open("POST", this.config.ServerUrl + '/index.php');
 
     xhr.send(formData);
 

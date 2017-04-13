@@ -4,8 +4,17 @@ import {Injectable} from '@angular/core';
 export class GlobalVars {
 
   myGlobalVar : any;
+  fingerprint : any;
 
   constructor() {
+  }
+
+  setFingerprint(value){
+    this.fingerprint = value;
+  }
+
+  getFingerprint(){
+    return this.fingerprint;
   }
 
   setMyGlobalVar(value) {

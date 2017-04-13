@@ -6,5 +6,7 @@
   "ImgMaxNum": 15,
 
   "CamOnly": 0,
-  "SafariLimit": 2
+  "SafariLimit": 2,
+
+  "ReprintEnable": true
 }
