@@ -13,12 +13,12 @@
 </ion-content>
 <ion-footer>
     <div class="my-footer">
-        <div text-center>
-            <button ion-button [navPush]="selImagePage" small>Bilder Auswahl</button>
-            <button ion-button [navPush]="reprintPage" small *ngIf="btnReprintFlag">Reprint</button>
+        <div text-center style="padding-top: 10px;">
+            <button ion-button [navPush]="selImagePage" large style="padding: 5px;">Bilder Auswahl</button>
+            <button ion-button [navPush]="reprintPage" large *ngIf="btnReprintFlag" style="padding-left: 8%; padding-right: 8%;">  Reprint  </button>
         </div>
         <div text-center>
-            <button ion-button [navPush]="helpPage" small>Hilfe</button>
+            <button ion-button [navPush]="helpPage" large>Hilfe</button>
         </div>
     </div>
 </ion-footer>

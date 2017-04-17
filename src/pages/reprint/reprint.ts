@@ -12,6 +12,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import $ from "jquery";
 
 import { GlobalVars } from '../../app/globalVars';
+import {NgModel} from "@angular/forms";
 
 
 @Component({
@@ -20,7 +21,7 @@ import { GlobalVars } from '../../app/globalVars';
 })
 
 export class ReprintPage {
-  imgArrays =[]; // All Images are in Array
+  imgArrays : Array<any>; // All Images are in Array
   imgMaxNum = 0; // the Max Number of Images
   imgAgeHours = 0; // the Max age hours
   imgAgeMax = 0; // the Max age
@@ -79,7 +80,8 @@ export class ReprintPage {
         id: _i,
         img: imageUrls[_i],
         bFlag : true,
-        file : null
+        file : null,
+        checked: true
       };
       this.imgArrays.push(item);
       this.imgMaxNum = imageUrls.length;
@@ -103,7 +105,7 @@ export class ReprintPage {
   }
 
   InitialData(){
-      this.imgArrays=[];
+      this.imgArrays= [];
       // this.initializeImage();
       this.max = 0;
       this.proValue = 0;
@@ -111,14 +113,24 @@ export class ReprintPage {
       this.clickIndex = 0;
   }
 
+  toggleItem(item){
+    this.imgArrays[item.id].checked = !this.imgArrays[item.id].checked;
+  }
+
   fileSend(){
     $(".fadeMe").show();
 
     var self = this;
+    var reprintImgs = Array();
+    for(let imageSub of this.imgArrays){
+      if (imageSub.checked == true && imageSub.img != null){
+        reprintImgs.push(imageSub.img);
+      }
+    }
 
     $.post(this.reprintUrl, {
       fingerprint: this.fingerprint,
-      reprint_image: true
+      reprint_image: reprintImgs
     },
     function (result) {
       self.InitialData();

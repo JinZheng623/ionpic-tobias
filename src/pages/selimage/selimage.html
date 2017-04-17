@@ -32,10 +32,10 @@
 
 </ion-content>
 <ion-footer>
-    <div class="my-footer">
-        <button class="my-button1" ion-button [navPush]="homePage" small *ngIf="!btnSelFlag">Zurück</button>
-        <button class="my-button2" ion-button [navPush]="homePage" small *ngIf="btnSelFlag">Zurück</button>
-        <button class="my-button2" ion-button small (click)="fileSend()" *ngIf="btnSelFlag">Drucken</button>
+    <div  text-center style="height:80px; padding-top: 10px">
+        <button class="my-button1" ion-button [navPush]="homePage" large *ngIf="!btnSelFlag">Zurück</button>
+        <button class="my-button2" ion-button [navPush]="homePage" large *ngIf="btnSelFlag">Zurück</button>
+        <button class="my-button2" ion-button large (click)="fileSend()" *ngIf="btnSelFlag">Drucken</button>
 
     </div>
 </ion-footer>

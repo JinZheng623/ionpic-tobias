@@ -7575,8 +7575,8 @@ ion-card-content {
 
 .checkbox-ios .checkbox-icon {
   position: relative;
-  width: 21px;
-  height: 21px;
+  width: 45px;
+  height: 45px;
   border-width: 1px;
   border-style: solid;
   border-radius: 50%;
@@ -7595,7 +7595,7 @@ ion-card-content {
   left: 7px;
   width: 4px;
   height: 9px;
-  border-width: 1px;
+  border-width: 25px;
   border-top-width: 0;
   border-left-width: 0;
   border-style: solid;
@@ -7672,11 +7672,11 @@ ion-card-content {
 
 .checkbox-md .checkbox-icon {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 45px;
+  height: 45px;
   border-width: 2px;
   border-style: solid;
-  border-radius: 2px;
+  border-radius: 50%;
   border-color: #787878;
   background-color: #fff;
   transition-duration: 280ms;
@@ -7776,11 +7776,11 @@ ion-card-content {
 
 .checkbox-wp .checkbox-icon {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 45px;
+  height: 45px;
   border-width: 2px;
   border-style: solid;
-  border-radius: 0;
+  border-radius: 50%;
   border-color: #333;
   background-color: #fff;
 }
@@ -24616,6 +24616,14 @@ div.fadeMe {
     height: 90%;
     width: 90%;
   }
+}
+
+.checkbox-checked .checkbox-inner {
+  position: absolute !important;
+  top: 0px !important;
+  left: 13px !important;
+  height: 31px !important;
+  width: 15px !important;
 }
 
 .my-image-items button {

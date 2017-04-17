@@ -24,6 +24,7 @@ export class MyApp {
 
       Fingerprintjs2().get (function(result, components){
         globalVars.setFingerprint(result);
+        console.log(components);
       });
 
     });

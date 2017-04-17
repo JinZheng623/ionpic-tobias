@@ -115,6 +115,14 @@ and (orientation : landscape){
   }
 }
 
+.checkbox-checked .checkbox-inner {
+  position: absolute !important;
+  top: 0px !important;
+  left: 13px !important;
+  height: 31px !important;
+  width: 15px !important;
+}
+
 .my-image-items button {
     width: 70%;
     left: 15%;

@@ -1,5 +1,5 @@
 {
-  "ServerUrl": "http://localhost/ionpic-Tobias/serverphp",
+  "ServerUrl": "./serverphp",
   "ImgAgeFlag": true,
   "ImgAgeDate":"04/01/2017 16:00:00",
   "ImgMaxNum": 15,
